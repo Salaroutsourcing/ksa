@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta name="robots" content="noindex" /><title>
+    Local responsive QA</title
+  ><style>
+    body {
+      margin: 12px;
+      background: #ddd;
+      font: 14px Arial;
+    }
+    iframe {
+      display: block;
+      border: 0;
+      background: white;
+    }
+    button {
+      padding: 10px;
+      margin: 8px;
+    }
+    output {
+      display: block;
+      margin: 8px;
+    }
+  </style>
+  <h1>Responsive preview</h1>
+  <button data-size="320">320</button
+  ><button data-size="390">390</button
+  ><button data-size="768">768</button
+  ><button data-size="1440">1440</button
+  ><button id="check">Measure</button
+  ><output id="result"></output
+  ><iframe title="Site preview" src="/" width="390" height="844"></iframe>
+  <script>
+    const frame = document.querySelector("iframe");
+    document.querySelectorAll("[data-size]").forEach(
+      (b) =>
+        (b.onclick = () => {
+          frame.width = b.dataset.size;
+        }),
+    );
+    document.querySelector("#check").onclick = () => {
+      const d = frame.contentDocument;
+      document.querySelector("output").textContent = JSON.stringify({
+        viewport: frame.contentWindow.innerWidth,
+        documentWidth: d.documentElement.scrollWidth,
+        overflow: [...d.querySelectorAll("main *")]
+          .filter(
+            (e) =>
+              e.getBoundingClientRect().right >
+                frame.contentWindow.innerWidth + 2 &&
+              getComputedStyle(e).position !== "absolute",
+          )
+          .map((e) => e.className)
+          .slice(0, 10),
+      });
+    };
+  </script>
+</html>
