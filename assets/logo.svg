@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="SK Attestations">
+  <rect width="512" height="512" rx="96" fill="#16273a"/>
+  <rect x="64" y="64" width="384" height="384" rx="48" fill="none" stroke="#c3ad82" stroke-width="6"/>
+  <text x="256" y="286" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="180" fill="#f6f4ea" letter-spacing="-4">SK</text>
+  <text x="256" y="352" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" letter-spacing="8" fill="#c3ad82">ATTESTATIONS</text>
+</svg>
