@@ -252,7 +252,7 @@ def redirects():
         path.write_text(redirect_stub(target,label))
         STUBS.add(('/'+str(path.relative_to(ROOT))).replace('/index.html','/') if not old.endswith('.html') else '/'+str(path.relative_to(ROOT)))
     (ROOT/'redirects.json').write_text(json.dumps(aliases,indent=2)+'\n')
-    (ROOT/'_redirects').write_text(''.join(f'{old} {target} 301\n' for old,target in sorted(aliases.items()) if old != target if o != n))
+    (ROOT/'_redirects').write_text(''.join(f'{o} {n} 301\n' for o,n in sorted(aliases.items()) if o != n and o not in PAGES))
 def cleanup():
     keep={'index.html','404.html','tools/responsive-preview.html'}
     keep|={ (p.lstrip('/')+'index.html') if p.endswith('/') else p.lstrip('/') for p in PAGES }
@@ -328,5 +328,4 @@ def main():
     write_sitemap();write_robots();write_llms();write_feed()
     gone=cleanup()
     if gone: print('Removed '+str(len(gone))+' retired page(s): '+', '.join(gone))
-    print(f'Built {len(PAGES)} indexable pages, redirects, sitemap, robots.txt, llms.txt, feed.xml and _redirects.')
 if __name__=='__main__':main()
