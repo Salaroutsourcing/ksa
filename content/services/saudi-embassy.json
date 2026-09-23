@@ -1,0 +1,42 @@
+{
+  "slug": "saudi-embassy",
+  "title": "Saudi Embassy Requirements Guidance",
+  "icon": "stamp",
+  "category": "Destination preparation",
+  "description": "Understand the recipient’s request and the official consular instructions before arranging a submission.",
+  "answer": "We provide independent preparation guidance for Saudi-bound documents. Only the competent mission or authority can decide the applicable process and issue an official attestation.",
+  "sections": [
+    {
+      "title": "Clarify the document’s purpose",
+      "text": "Employment, study, family and commercial uses can require different evidence. Ask the recipient for a written list and identify whether it wants an original, copy or translation."
+    },
+    {
+      "title": "Prepare the right questions",
+      "text": "Confirm the document category, prerequisites, appearance requirements and permitted submission channel directly with the relevant mission or authority."
+    },
+    {
+      "title": "No assumed agent access",
+      "text": "We do not claim to be an embassy representative or authorised submission agent. Applicant-only or otherwise restricted steps must be completed through the official channel."
+    },
+    {
+      "title": "Before any paid assistance",
+      "text": "Agree the exact preparation work separately. Official charges and service fees should be distinguished; no fixed government fee, delivery date or approval is promised here."
+    }
+  ],
+  "steps": [
+    "Identify the recipient and purpose",
+    "Check the mission’s current instructions",
+    "Confirm the permitted submission channel",
+    "Use the applicable official process"
+  ],
+  "sources": [
+    "saudi"
+  ],
+  "related": [
+    "/blog/saudi-embassy-preparation/",
+    "/document-issues/"
+  ],
+  "order": 4,
+  "status": "published",
+  "updated": "2026-09-24"
+}

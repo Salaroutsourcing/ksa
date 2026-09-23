@@ -1,0 +1,43 @@
+{
+  "slug": "name-mismatch-degree-passport",
+  "title": "Degree and passport names differ: what to check",
+  "category": "Document issues",
+  "icon": "user-x",
+  "description": "Compare the records and identify the responsible issuer before making changes.",
+  "answer": "Identify which record is correct and which institution issued the record that needs attention. Never alter an official document yourself or assume an affidavit is a universal solution.",
+  "sections": [
+    {
+      "title": "Make a simple comparison",
+      "text": "Write the name exactly as it appears on the degree, passport and identity record. Note missing names, spelling differences and any formal name change. Keep this comparison private."
+    },
+    {
+      "title": "Ask the responsible issuer",
+      "text": "A university answers questions about its academic record. The passport authority handles passport records. The identity authority handles identity records. One office cannot automatically correct another office’s document."
+    },
+    {
+      "title": "Ask the recipient what it accepts",
+      "text": "The organisation receiving the document may ask for a corrected record, evidence of a name change or other supporting information. Get its answer in writing before purchasing additional services."
+    },
+    {
+      "title": "Avoid shortcuts",
+      "text": "Do not erase, overwrite or digitally edit a name on an official document. A declaration does not itself change the source record, and its acceptance depends on the recipient."
+    },
+    {
+      "title": "Begin with a description",
+      "text": "An initial enquiry can simply say which documents differ and what the difference is. Leave out passport numbers, identity numbers, birth dates and scans until the handling arrangements are clear."
+    }
+  ],
+  "sources": [
+    "passport",
+    "identity"
+  ],
+  "related": [
+    "/services/document-review/",
+    "/document-issues/"
+  ],
+  "order": 3,
+  "status": "published",
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "author": "SK Attestation Services"
+}

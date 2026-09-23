@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Name differences",
+    "icon": "user-x",
+    "text": "Compare the names on each record. Ask the responsible issuer about correction and the recipient about accepted evidence.",
+    "guide": "name-mismatch-degree-passport"
+  },
+  {
+    "title": "Father’s name or birth-date differences",
+    "icon": "users",
+    "text": "Identify the record containing the error and contact its issuer. Avoid assuming that one document automatically overrides another.",
+    "guide": "name-mismatch-degree-passport"
+  },
+  {
+    "title": "Missing records",
+    "icon": "file-x",
+    "text": "Find out which exact record is missing and ask the issuer about replacement or the recipient about accepted alternatives.",
+    "guide": "saudi-embassy-preparation"
+  },
+  {
+    "title": "University response pending",
+    "icon": "mail",
+    "text": "Check which office received the request, whether it has enough information and what the platform is waiting for.",
+    "guide": "saudi-culture-document-questions"
+  },
+  {
+    "title": "Previous rejection",
+    "icon": "refresh-cw",
+    "text": "Keep the actual reason. Address the requested change through the responsible institution before repeating the submission.",
+    "guide": "saudi-culture-document-questions"
+  },
+  {
+    "title": "Unclear programme or route",
+    "icon": "route",
+    "text": "Identify the recipient and its exact request before choosing between academic verification and employment-related checks.",
+    "guide": "qvp-vs-mosadaqa"
+  }
+]

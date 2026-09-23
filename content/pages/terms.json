@@ -1,0 +1,24 @@
+{
+  "slug": "terms",
+  "title": "Terms of use",
+  "headline": "Clear expectations before you begin.",
+  "description": "Website information is general preparation guidance, not an official determination.",
+  "sections": [
+    {
+      "title": "Official requirements",
+      "text": "The competent institutions and receiving organisations decide eligibility and acceptable documents. Their current requirements take precedence over general website guidance."
+    },
+    {
+      "title": "Private assistance",
+      "text": "An enquiry does not create a paid-service agreement. Confirm the exact scope, charges, payment and cancellation arrangements separately before paid work begins."
+    },
+    {
+      "title": "No promised outcome",
+      "text": "We do not guarantee a verification, attestation, correction, appointment, recognition or visa result. No universal processing time or official fee is promised by the website."
+    },
+    {
+      "title": "Account and document integrity",
+      "text": "Use accurate information. Do not alter official records or share credentials. Applicant-only, appearance and consent requirements must be followed through the correct official channels."
+    }
+  ]
+}

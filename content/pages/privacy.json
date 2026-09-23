@@ -1,0 +1,28 @@
+{
+  "slug": "privacy",
+  "title": "Privacy",
+  "headline": "Share only what you need to.",
+  "description": "This page explains how this website handles information.",
+  "sections": [
+    {
+      "title": "Browsing and preferences",
+      "text": "This static website contains no analytics or advertising scripts. The hosting provider may process connection logs. A theme preference is stored in your browser only when available; it is not an account or a tracking identifier."
+    },
+    {
+      "title": "Case checker",
+      "text": "The checker uses fixed choices in the current page. It has no upload field and does not automatically submit or store your answers. Reloading clears the selection."
+    },
+    {
+      "title": "Choosing a contact channel",
+      "text": "A WhatsApp or email link opens an external service with the message you choose to prepare. That provider processes the information you send according to its own practices. Keep passwords, one-time codes and identity numbers out of the first enquiry."
+    },
+    {
+      "title": "Before sending documents",
+      "text": "Ask who will access files, why they are required, how they will be transferred and the applicable retention and deletion arrangements. This site does not operate a document vault or promise a particular email retention period."
+    },
+    {
+      "title": "Questions and requests",
+      "text": "Contact info@salaroutsourcing.com for privacy questions or access and deletion enquiries. Describe your request without attaching additional sensitive documents unnecessarily."
+    }
+  ]
+}

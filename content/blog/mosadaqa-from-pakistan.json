@@ -1,0 +1,47 @@
+{
+  "slug": "mosadaqa-from-pakistan",
+  "title": "Mosadaqa from Pakistan: what to clarify first",
+  "category": "Mosadaqa",
+  "icon": "graduation-cap",
+  "description": "Start with the request, the academic record and the official platform—not a guaranteed sequence.",
+  "answer": "Begin by identifying what the receiving organisation means by verification and which academic record it wants checked. Mosadaqa is a certificate-verification platform; acceptance of a qualification is a separate question.",
+  "sections": [
+    {
+      "title": "1. Identify the request",
+      "text": "Keep the exact wording from the employer, institution or relevant authority. Confirm whether it asks for academic verification, recognition or another process. A label used informally is not a complete checklist."
+    },
+    {
+      "title": "2. Compare your academic records",
+      "text": "Review the qualification title, university, campus, dates and names across the degree and supporting academic record. Record differences before beginning a new application."
+    },
+    {
+      "title": "3. Check the official platform",
+      "text": "Use the current official instructions to confirm eligibility, documents, applicant responsibilities and charges. This guide does not quote fixed fees or turnaround times because they must be checked at the point of application."
+    },
+    {
+      "title": "4. Keep university questions specific",
+      "text": "If an issuer response is needed, ask the relevant university office what request it received and what information it needs. Avoid submitting a duplicate application simply because a response is pending."
+    },
+    {
+      "title": "5. Protect access to your account",
+      "text": "Keep passwords, one-time codes and applicant consent under your control. An independent adviser does not replace you where the process requires your identity or direct action."
+    },
+    {
+      "title": "Questions to ask before paying",
+      "text": "Which exact service is requested? What work would private assistance cover? Which steps must I perform myself? What evidence and current official charge apply to my case?"
+    }
+  ],
+  "sources": [
+    "mosadaqa",
+    "education"
+  ],
+  "related": [
+    "/services/mosadaqa/",
+    "/document-issues/"
+  ],
+  "order": 1,
+  "status": "published",
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "author": "SK Attestation Services"
+}

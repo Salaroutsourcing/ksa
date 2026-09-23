@@ -1,38 +1,22 @@
-# SK Attestations
+# SK Attestation Services
 
-> Independent document attestation and legalization assistance from Pakistan. Attestation, verification and acceptance decisions are made by the competent authorities, not by this site.
+Independent document preparation and process guidance. No official-agent appointment or authority to issue authentication is claimed.
 
-## Key pages
+## Services
+- [Mosadaqa Guidance](https://ksa.salaroutsourcing.com/services/mosadaqa/): Understand the verification request, prepare questions for your university, and check the official platform instructions.
+- [QVP Qualification Guidance](https://ksa.salaroutsourcing.com/services/qvp/): Clarify the qualification-verification request behind your Saudi employment process.
+- [Saudi Culture Requirements Guidance](https://ksa.salaroutsourcing.com/services/saudi-culture/): Make sense of a cultural-office or academic verification request without assuming every case follows the same route.
+- [Saudi Embassy Requirements Guidance](https://ksa.salaroutsourcing.com/services/saudi-embassy/): Understand the recipient’s request and the official consular instructions before arranging a submission.
+- [UAE Embassy Requirements Guidance](https://ksa.salaroutsourcing.com/services/uae-embassy/): Prepare for a UAE document request using the current official service and mission instructions.
+- [Document Issue Review](https://ksa.salaroutsourcing.com/services/document-review/): Identify name differences, missing records and unresolved queries before resubmitting.
 
-- [Check My Documents](https://ksa.salaroutsourcing.com/check-documents/): Guided check that identifies the stages a document may need. No files required.
-- [Document assistance services](https://ksa.salaroutsourcing.com/services/): Assistance for educational, official-authority and international document processes.
-- [Mosadaqa degree attestation in Pakistan](https://ksa.salaroutsourcing.com/guides/mosadaqa-degree-attestation/): What mosadaqa means for a degree used in Saudi Arabia, and how a name difference between the degree, passport and CNIC is resolved.
-- [Degree name different from passport?](https://ksa.salaroutsourcing.com/guides/degree-name-different-from-passport/): Which issuer corrects a name difference on a degree, passport or identity record.
-- [Degree, passport and CNIC name mismatch](https://ksa.salaroutsourcing.com/problems/degree-passport-name-mismatch/): Comparing degree, passport and CNIC records before attestation.
-- [HEC or IBCC: which authority applies?](https://ksa.salaroutsourcing.com/guides/hec-vs-ibcc/): Which educational authority applies to a qualification.
-- [MOFA attestation: where to begin](https://ksa.salaroutsourcing.com/guides/mofa-attestation-pakistan/): Where the foreign affairs stage fits in the sequence.
-- [Apostille or embassy legalization?](https://ksa.salaroutsourcing.com/guides/apostille-vs-embassy-attestation/): How to establish which authentication route applies.
-- [Documents for Saudi Arabia](https://ksa.salaroutsourcing.com/countries/saudi-arabia/): Preparation questions for documents used in Saudi Arabia.
-- [Documents for the UAE](https://ksa.salaroutsourcing.com/countries/uae/): Preparation questions for documents used in the United Arab Emirates.
-- [From document to destination](https://ksa.salaroutsourcing.com/process/): The stages from document to destination.
-- [Start with the official source](https://ksa.salaroutsourcing.com/sources/): Official authority sources, with direct links.
+## Articles
+- [UAE document preparation: start with the recipient](https://ksa.salaroutsourcing.com/blog/uae-document-preparation/)
+- [Preparing a Saudi Embassy document enquiry](https://ksa.salaroutsourcing.com/blog/saudi-embassy-preparation/)
+- [Saudi Culture requests: questions for your university](https://ksa.salaroutsourcing.com/blog/saudi-culture-document-questions/)
+- [QVP and Mosadaqa: start with the right request](https://ksa.salaroutsourcing.com/blog/qvp-vs-mosadaqa/)
+- [Degree and passport names differ: what to check](https://ksa.salaroutsourcing.com/blog/name-mismatch-degree-passport/)
+- [Mosadaqa from Pakistan: what to clarify first](https://ksa.salaroutsourcing.com/blog/mosadaqa-from-pakistan/)
 
-## Guides
-
-- [Degree name different from passport?](https://ksa.salaroutsourcing.com/guides/degree-name-different-from-passport/): A degree, passport or CNIC that shows a different spelling or a missing surname needs the right issuer, not another stamp. Compare the records first.
-- [MOFA attestation: where to begin](https://ksa.salaroutsourcing.com/guides/mofa-attestation-pakistan/): Start with the document category and the authority that comes before the foreign affairs stage, then confirm the current instructions for your document.
-- [Mosadaqa degree attestation in Pakistan](https://ksa.salaroutsourcing.com/guides/mosadaqa-degree-attestation/): Mosadaqa means attestation or verification of a document for Saudi use. See which records must match and how name differences are resolved.
-- [Apostille or embassy legalization?](https://ksa.salaroutsourcing.com/guides/apostille-vs-embassy-attestation/): The applicable route depends on treaty status, the document and the recipient, not the destination name alone. Check the right question first.
-- [HEC or IBCC: which authority applies?](https://ksa.salaroutsourcing.com/guides/hec-vs-ibcc/): Look at the qualification level and awarding body rather than the word “certificate” when you decide which educational authority to approach.
-- [Why was your document rejected?](https://ksa.salaroutsourcing.com/guides/why-documents-get-rejected/): A query or rejection notice tells you which part of the file needs attention. Read the stated reason before you resubmit or pay again.
-
-## Facts
-
-- Business name: SK Attestations
-- Contact email: info@salaroutsourcing.com
-- Telephone: +92 304 5999859
-- Office: Office No. 10, Alfazal Plaza 64C, Satellite Town, Rawalpindi, Punjab, Pakistan
-- Editorial update: 22 September 2026
-- This site does not issue attestations and does not decide eligibility, verification or acceptance.
-- There is no document upload: an enquiry starts with a written description.
-- Fees and timelines are not published, because official charges and arrangements change.
+## Scope
+Official platforms, issuers and recipients make decisions. Applicant-only and restricted steps must follow the official rules.

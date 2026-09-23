@@ -1,0 +1,52 @@
+[
+  {
+    "category": "Our role",
+    "question": "Are you an official authority or appointed agent?",
+    "answer": "No. We offer independent preparation and process guidance. We do not claim government affiliation, embassy appointment or authority to issue verification or attestation."
+  },
+  {
+    "category": "Our role",
+    "question": "Can you complete an applicant-only step for me?",
+    "answer": "No. Where a process requires the applicant, direct consent, personal appearance or an officially permitted provider, that requirement must be followed."
+  },
+  {
+    "category": "Our role",
+    "question": "Can you guarantee acceptance?",
+    "answer": "No. The relevant platform, issuing institution, embassy or recipient makes its own decision. Guidance does not guarantee approval, recognition or a visa outcome."
+  },
+  {
+    "category": "Documents",
+    "question": "What should I send first?",
+    "answer": "Start with the document type, destination, purpose and a general description of the issue. Do not send scans, identity numbers, passwords or one-time codes in your first message."
+  },
+  {
+    "category": "Documents",
+    "question": "Can you correct a name on my degree?",
+    "answer": "Only the responsible issuer can correct its official record. We help you compare the issue and identify questions for the issuer and receiving organisation."
+  },
+  {
+    "category": "Saudi Arabia",
+    "question": "Is QVP the same as Mosadaqa?",
+    "answer": "Do not assume the names refer to the same requirement. Confirm the exact programme and official instructions with the requesting organisation. Academic verification, employment-related checks and skills examinations are distinct questions."
+  },
+  {
+    "category": "Saudi Arabia",
+    "question": "Is a pending university reply a rejection?",
+    "answer": "Not necessarily. Read the official status or query and ask the relevant university office what response is needed before considering another application."
+  },
+  {
+    "category": "UAE",
+    "question": "Does every UAE-bound document follow one route?",
+    "answer": "No. Check the official service and relevant mission instructions for the specific issuer and document, as well as the recipient’s accepted format."
+  },
+  {
+    "category": "Fees & timing",
+    "question": "Will the checker calculate an official price or completion date?",
+    "answer": "No. It gives preparation questions. Current official charges, private assistance fees and any timing estimate should be clarified separately for the actual case."
+  },
+  {
+    "category": "Privacy",
+    "question": "Does this website upload my documents?",
+    "answer": "No. The case checker works locally and accepts no files. Choosing a contact link opens WhatsApp or email; those providers process the information you choose to send."
+  }
+]

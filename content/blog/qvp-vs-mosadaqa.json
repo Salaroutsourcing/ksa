@@ -1,0 +1,43 @@
+{
+  "slug": "qvp-vs-mosadaqa",
+  "title": "QVP and Mosadaqa: start with the right request",
+  "category": "Qualification verification",
+  "icon": "clipboard-check",
+  "description": "Different programme names do not automatically mean interchangeable requirements.",
+  "answer": "Do not choose a programme from its name alone. Clarify whether the request concerns an academic certificate, a profession-related qualification check or a practical skills examination.",
+  "sections": [
+    {
+      "title": "Start with who is asking",
+      "text": "An employer, professional body, education institution or processing authority may use different terminology. Ask for the named programme, official link and purpose in writing."
+    },
+    {
+      "title": "Academic certificate verification",
+      "text": "For a Mosadaqa request, confirm the academic record to be verified and follow the current platform instructions. Verification is not a guarantee of recognition for every profession or purpose."
+    },
+    {
+      "title": "Employment-related qualification checks",
+      "text": "Saudi professional-accreditation guidance addresses qualifications and their relationship to the profession. Confirm whether your occupation and case fall within the relevant programme’s scope."
+    },
+    {
+      "title": "A trade test is another question",
+      "text": "A practical skills examination and verification of academic or experience records should not be treated as the same service. Ask which evidence or examination is actually requested."
+    },
+    {
+      "title": "Before opening an application",
+      "text": "Have the qualification title, awarding institution, profession and recipient’s written instruction available. Keep personal account access private and verify the official route before payment."
+    }
+  ],
+  "sources": [
+    "qvp",
+    "mosadaqa"
+  ],
+  "related": [
+    "/services/qvp/",
+    "/document-issues/"
+  ],
+  "order": 2,
+  "status": "published",
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "author": "SK Attestation Services"
+}

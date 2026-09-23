@@ -1,0 +1,43 @@
+{
+  "slug": "mosadaqa",
+  "title": "Mosadaqa Guidance",
+  "icon": "graduation-cap",
+  "category": "Academic verification",
+  "description": "Understand the verification request, prepare questions for your university, and check the official platform instructions.",
+  "answer": "Mosadaqa is an academic certificate verification platform. Our role is independent preparation guidance; the platform and relevant institutions control verification and decisions.",
+  "sections": [
+    {
+      "title": "Who this helps",
+      "text": "Graduates who have received a request for academic verification for use in Saudi Arabia. Start with the exact wording of the request, not an assumed sequence."
+    },
+    {
+      "title": "What we can help you prepare",
+      "text": "A record of the qualification, awarding institution, study details and any difference between your academic and identity records. We can help organise questions to ask the university or official platform."
+    },
+    {
+      "title": "What stays with you",
+      "text": "You retain control of your account, consent, credentials and payments. Follow the official platform’s rules for applications. Never share a password or one-time code with an intermediary."
+    },
+    {
+      "title": "Before you begin",
+      "text": "Confirm the current official checklist and whether your qualification is within scope. Ask the recipient whether it wants verification, recognition or another form of evidence; these are different decisions."
+    }
+  ],
+  "steps": [
+    "Clarify the recipient’s request",
+    "Compare the academic and identity records",
+    "Check current platform requirements",
+    "Follow the official applicant route"
+  ],
+  "sources": [
+    "mosadaqa",
+    "education"
+  ],
+  "related": [
+    "/blog/mosadaqa-from-pakistan/",
+    "/document-issues/"
+  ],
+  "order": 1,
+  "status": "published",
+  "updated": "2026-09-24"
+}

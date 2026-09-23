@@ -1,0 +1,20 @@
+{
+  "slug": "disclaimer",
+  "title": "Independent-service disclaimer",
+  "headline": "Guidance is not an official decision.",
+  "description": "We are a private document-guidance service.",
+  "sections": [
+    {
+      "title": "No authority claim",
+      "text": "We are not an embassy, government department, official platform or appointed submission agent. Authority names and official links explain where decisions belong."
+    },
+    {
+      "title": "Restricted steps",
+      "text": "We do not offer to complete applicant-only steps, issue official authentication or bypass account, identity, consent or personal-appearance requirements."
+    },
+    {
+      "title": "Individual circumstances",
+      "text": "An illustrative preparation path is not a mandatory sequence or legal advice. For legal instruments, disputes or eligibility decisions, seek appropriate professional or official advice."
+    }
+  ]
+}

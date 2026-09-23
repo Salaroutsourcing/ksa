@@ -1,0 +1,43 @@
+{
+  "slug": "saudi-culture-document-questions",
+  "title": "Saudi Culture requests: questions for your university",
+  "category": "Academic records",
+  "icon": "landmark",
+  "description": "Understand who needs a response and what the issuing institution must confirm.",
+  "answer": "Establish the exact office or platform behind the request. Then ask the issuing institution what information is needed to verify the academic record.",
+  "sections": [
+    {
+      "title": "Keep the request together",
+      "text": "Save the wording, requesting organisation and relevant correspondence for your own records. Describe the issue without disclosing private case references in the first enquiry."
+    },
+    {
+      "title": "Contact the correct university office",
+      "text": "Ask the registrar, examination or records office which team handles verification requests. Ask whether a request has been received and whether any information from you is missing."
+    },
+    {
+      "title": "Separate delay from rejection",
+      "text": "A pending reply is not necessarily a rejection. Read the status or query carefully and use the official support channel to clarify what action is required."
+    },
+    {
+      "title": "Do not assume eligibility",
+      "text": "The qualification, institution and study details may affect the enquiry. The deciding office or platform determines eligibility; an adviser cannot override that decision."
+    },
+    {
+      "title": "Plan the next step",
+      "text": "List who needs to respond, what they need and how you will confirm a response. Keep any follow-up factual and avoid repeated applications unless instructed."
+    }
+  ],
+  "sources": [
+    "education",
+    "mosadaqa"
+  ],
+  "related": [
+    "/services/saudi-culture/",
+    "/document-issues/"
+  ],
+  "order": 4,
+  "status": "published",
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "author": "SK Attestation Services"
+}

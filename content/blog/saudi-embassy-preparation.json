@@ -1,0 +1,42 @@
+{
+  "slug": "saudi-embassy-preparation",
+  "title": "Preparing a Saudi Embassy document enquiry",
+  "category": "Saudi Arabia",
+  "icon": "stamp",
+  "description": "Ask about the document category and the permitted official route.",
+  "answer": "A useful enquiry identifies the document, issuing country, intended use and receiving organisation. The mission or competent authority decides which official process applies.",
+  "sections": [
+    {
+      "title": "Identify the document precisely",
+      "text": "A degree, civil record, corporate document and power of attorney are not interchangeable categories. Use the exact title and identify the issuer."
+    },
+    {
+      "title": "Ask about the applicable route",
+      "text": "Confirm current prerequisites, document format, any translation and whether personal appearance is required. Do not assume a representative can complete an applicant-only step."
+    },
+    {
+      "title": "Separate private guidance from official work",
+      "text": "An independent adviser may help organise questions and preparation. It does not issue an embassy stamp, guarantee an appointment or determine the outcome."
+    },
+    {
+      "title": "Before sharing originals",
+      "text": "Clarify who will receive the document, the official submission channel and the return arrangements. Avoid sending originals on the basis of a general promise."
+    },
+    {
+      "title": "Fees and timing",
+      "text": "Ask for current official charges and a separate description of any private assistance fee. Do not treat an illustrative timeline as a promised completion date."
+    }
+  ],
+  "sources": [
+    "saudi"
+  ],
+  "related": [
+    "/services/saudi-embassy/",
+    "/document-issues/"
+  ],
+  "order": 5,
+  "status": "published",
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "author": "SK Attestation Services"
+}

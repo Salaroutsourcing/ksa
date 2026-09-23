@@ -1,0 +1,42 @@
+{
+  "slug": "uae-embassy",
+  "title": "UAE Embassy Requirements Guidance",
+  "icon": "plane",
+  "category": "Destination preparation",
+  "description": "Prepare for a UAE document request using the current official service and mission instructions.",
+  "answer": "The official UAE service determines the applicable route based on the document and issuing authority. We help you understand the request and organise preparation questions, without claiming embassy authority.",
+  "sections": [
+    {
+      "title": "Start with the receiving organisation",
+      "text": "Ask whether the document is for an employer, education provider, family process or business use. Obtain its instructions before selecting a service."
+    },
+    {
+      "title": "Check the official channel",
+      "text": "Use the official UAE document service and the relevant mission’s instructions to establish the applicable application route. Availability and document eligibility must be checked there."
+    },
+    {
+      "title": "Keep the scope clear",
+      "text": "We do not perform official authentication, replace applicant consent or claim approved courier status. Restricted steps stay with the applicant or the officially permitted provider."
+    },
+    {
+      "title": "Document differences",
+      "text": "Compare names, dates and document titles before proceeding. Ask the issuing institution about incorrect information and the recipient about any accepted translation."
+    }
+  ],
+  "steps": [
+    "Obtain the UAE recipient’s instructions",
+    "Identify the document and issuer",
+    "Check the current official application route",
+    "Resolve record issues before submission"
+  ],
+  "sources": [
+    "uae"
+  ],
+  "related": [
+    "/blog/uae-document-preparation/",
+    "/document-issues/"
+  ],
+  "order": 5,
+  "status": "published",
+  "updated": "2026-09-24"
+}

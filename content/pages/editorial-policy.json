@@ -1,0 +1,24 @@
+{
+  "slug": "editorial-policy",
+  "title": "Editorial policy",
+  "headline": "Useful guidance, without invented certainty.",
+  "description": "The blog explains preparation questions and links to relevant official sources.",
+  "sections": [
+    {
+      "title": "Source references",
+      "text": "Official links are provided so readers can check the current requirements. They do not indicate a partnership, appointment or endorsement of this business."
+    },
+    {
+      "title": "Dates and authors",
+      "text": "Article dates identify publication and content updates. They are not claims of professional review or a guarantee that all external rules were verified on that date. Named reviewers are listed only when their role and review are confirmed."
+    },
+    {
+      "title": "No unsupported claims",
+      "text": "We avoid invented customer totals, satisfaction rates, fixed official charges and blanket processing times. Programme scope and acceptance must be confirmed for the actual case."
+    },
+    {
+      "title": "Corrections",
+      "text": "Email the page link and a description of the issue to info@salaroutsourcing.com. Do not attach private documents merely to report a content error."
+    }
+  ]
+}

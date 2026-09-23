@@ -1,0 +1,43 @@
+{
+  "slug": "document-review",
+  "title": "Document Issue Review",
+  "icon": "file-search",
+  "category": "A clearer next step",
+  "description": "Identify name differences, missing records and unresolved queries before resubmitting.",
+  "answer": "A document problem needs the right question before it needs another submission. We help compare the issue and identify whom to contact; only the responsible issuer can correct its record.",
+  "sections": [
+    {
+      "title": "Issues we can help you describe",
+      "text": "Name or father’s-name differences, date discrepancies, missing documents, an unanswered university query or a previous rejection."
+    },
+    {
+      "title": "A practical first review",
+      "text": "Write down what differs, which record contains it and who raised the query. Avoid including personal numbers or scans in the first message."
+    },
+    {
+      "title": "Corrections belong to issuers",
+      "text": "Ask the university, identity office or other responsible issuer for the correction or verification procedure. Do not overwrite, erase or digitally alter an official document."
+    },
+    {
+      "title": "No guaranteed resolution",
+      "text": "A review can clarify next steps, but it does not guarantee correction, acceptance, a successful appeal or an official outcome."
+    }
+  ],
+  "steps": [
+    "Describe the issue without sensitive files",
+    "Compare the affected records",
+    "Identify the responsible issuer",
+    "Ask what evidence the recipient accepts"
+  ],
+  "sources": [
+    "passport",
+    "identity"
+  ],
+  "related": [
+    "/blog/name-mismatch-degree-passport/",
+    "/document-issues/"
+  ],
+  "order": 6,
+  "status": "published",
+  "updated": "2026-09-24"
+}

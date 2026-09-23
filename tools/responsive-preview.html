@@ -43,14 +43,13 @@
       document.querySelector("output").textContent = JSON.stringify({
         viewport: frame.contentWindow.innerWidth,
         documentWidth: d.documentElement.scrollWidth,
-        overflow: [...d.querySelectorAll("main *")]
+        overflow: [...d.querySelectorAll("body *")]
           .filter(
             (e) =>
               e.getBoundingClientRect().right >
-                frame.contentWindow.innerWidth + 2 &&
-              getComputedStyle(e).position !== "absolute",
+                frame.contentWindow.innerWidth + 2,
           )
-          .map((e) => e.className)
+          .map((e) => ({tag:e.tagName, class:String(e.className),right:e.getBoundingClientRect().right}))
           .slice(0, 10),
       });
     };

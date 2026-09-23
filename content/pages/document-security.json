@@ -1,0 +1,24 @@
+{
+  "slug": "document-security",
+  "title": "Document care",
+  "headline": "Careful sharing starts here.",
+  "description": "Your documents contain sensitive information. Begin with a description rather than a file.",
+  "sections": [
+    {
+      "title": "What to tell us first",
+      "text": "Document category, destination, purpose and the issue in general terms. Avoid full names, identity numbers, exact birth dates and private case references until there is a clear need."
+    },
+    {
+      "title": "What never belongs in a chat request",
+      "text": "Do not share passwords, one-time codes or a request to bypass applicant consent. Use the official platform directly for steps that require your identity."
+    },
+    {
+      "title": "Before transferring files",
+      "text": "Confirm the person handling the file, purpose, access, transfer method, retention and deletion arrangements. This website accepts no document uploads and does not claim a secure-storage service."
+    },
+    {
+      "title": "Correcting records",
+      "text": "Changes to an official record must go through its issuer. Never erase, overwrite or digitally change an official document yourself."
+    }
+  ]
+}

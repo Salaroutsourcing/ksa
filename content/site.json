@@ -1,0 +1,72 @@
+{
+  "name": "SK Attestation Services",
+  "short_name": "SK Attestation",
+  "url": "https://ksa.salaroutsourcing.com",
+  "tagline": "Independent document guidance",
+  "whatsapp": "923105507819",
+  "phone_display": "+92 310 5507819",
+  "email": "info@salaroutsourcing.com",
+  "address": "Office No. 10, Alfazal Plaza 64C, Satellite Town, Rawalpindi, Punjab, Pakistan",
+  "contact_note": "Please confirm an appointment before visiting.",
+  "updated": "2026-09-24",
+  "navigation": [
+    [
+      "/",
+      "Home"
+    ],
+    [
+      "/services/",
+      "Services"
+    ],
+    [
+      "/document-issues/",
+      "Document issues"
+    ],
+    [
+      "/blog/",
+      "Blog"
+    ],
+    [
+      "/faq/",
+      "FAQs"
+    ],
+    [
+      "/about/",
+      "About"
+    ],
+    [
+      "/contact/",
+      "Contact"
+    ]
+  ],
+  "sources": {
+    "mosadaqa": {
+      "label": "Mosadaqa — official platform",
+      "url": "https://www.mosadaqa.sa/Home/Landing"
+    },
+    "education": {
+      "label": "Saudi Ministry of Education — Mosadaqa platform announcement",
+      "url": "https://sites.moe.gov.sa/cm/in/news/news-19/"
+    },
+    "qvp": {
+      "label": "Saudi HRSD — professional accreditation and verification",
+      "url": "https://www.hrsd.gov.sa/en/care-about-you/skillsandtrain"
+    },
+    "saudi": {
+      "label": "Saudi Ministry of Foreign Affairs — official services",
+      "url": "https://www.mofa.gov.sa/en/"
+    },
+    "uae": {
+      "label": "UAE — official document attestation service",
+      "url": "https://www.mofa.gov.ae/en/Services/attestation"
+    },
+    "passport": {
+      "label": "DGIP — passport services",
+      "url": "https://www.dgip.gov.pk/"
+    },
+    "identity": {
+      "label": "NADRA — identity services",
+      "url": "https://www.nadra.gov.pk/"
+    }
+  }
+}

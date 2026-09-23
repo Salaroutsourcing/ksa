@@ -1,0 +1,42 @@
+{
+  "slug": "uae-document-preparation",
+  "title": "UAE document preparation: start with the recipient",
+  "category": "United Arab Emirates",
+  "icon": "plane",
+  "description": "Confirm the format and official service before choosing a submission route.",
+  "answer": "Get the UAE recipient’s instructions, identify the issuer and check the current official application service. The route can depend on the document and its origin.",
+  "sections": [
+    {
+      "title": "Define the purpose",
+      "text": "Employment, education, family and commercial requests may ask for different records. Identify the specific receiving organisation, not just the destination country."
+    },
+    {
+      "title": "Check the format",
+      "text": "Ask whether the recipient needs an original, accepted digital document, certified copy or translation. Do not assume a scan has the same status as an original."
+    },
+    {
+      "title": "Use the official service instructions",
+      "text": "The UAE official document service and relevant mission explain their current application channels. Follow the route assigned to your document and confirm availability for your case."
+    },
+    {
+      "title": "Resolve inconsistencies first",
+      "text": "Compare names, dates and issuer details. Any correction should come through the responsible issuer; private assistance does not modify official records."
+    },
+    {
+      "title": "Keep expectations clear",
+      "text": "Authentication does not itself promise employment, professional recognition or acceptance by every recipient. Confirm those requirements separately."
+    }
+  ],
+  "sources": [
+    "uae"
+  ],
+  "related": [
+    "/services/uae-embassy/",
+    "/document-issues/"
+  ],
+  "order": 6,
+  "status": "published",
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "author": "SK Attestation Services"
+}

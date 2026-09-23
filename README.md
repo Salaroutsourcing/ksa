@@ -1,69 +1,47 @@
-# SK Attestations
+# SK Attestation Services
 
-A lightweight, static document-assistance website. Midnight navy / warm ivory design, locally hosted Manrope variable font, CSS/SVG document animations and accessible native controls. No production JavaScript dependencies, build service, analytics or document-upload backend.
+Website: https://ksa.salaroutsourcing.com/
 
-## Preview
+A static, multi-page website based on the supplied neon design. Each blog post and service has its own editable JSON file and its own public page. Shared layouts, styles and scripts are separate.
 
-From this repository:
+## Where to edit
 
-```sh
-python3 -m http.server 4173 --bind 127.0.0.1
-```
+| Change | Source folder or file |
+| --- | --- |
+| Add or edit a blog post | `content/blog/` — one JSON file per article |
+| Add or edit a service | `content/services/` — one JSON file per service |
+| Business details and navigation | `content/site.json` |
+| About, privacy and other information pages | `content/pages/` |
+| FAQs and document issues | `content/faq.json`, `content/issues.json` |
+| Page layouts | `templates/` |
+| Header, footer and shared sections | `templates/partials/` |
+| Design and responsive styling | `assets/css/` |
+| Interactive behaviour | `assets/js/` |
+| Brand images and fonts | `assets/images/`, `assets/fonts/` |
 
-Open http://127.0.0.1:4173/. Use an HTTP server rather than opening HTML files directly: routes and assets are root-relative. `tools/responsive-preview.html` provides 320, 390, 768 and 1440px frames for development checks (noindex, excluded from sitemap).
+Read [the editing guide](docs/CONTENT-EDITING.md) for a step-by-step example.
 
-## Edit and rebuild
+## Preview and validate
 
-- `tools/content.py`: business/entity details, service, guide, document, destination, problem-case and FAQ content, including the Mosadaqa degree guide.
-- `tools/build.py`: reusable navigation, footer, card, assessment, guide, service, problem, country and trust-page templates; metadata, JSON-LD, `sitemap.xml` with `lastmod`, `robots.txt`, `llms.txt` and `feed.xml`.
-- `styles.css`: design tokens, layouts, responsive rules, motion and reduced-motion support.
-- `script.js`: progressively enhanced navigation, four-step assessment, destination selection (guidance is read from the text already in the page), FAQs and email draft preparation. No runtime `fetch`.
-- `assets/`: locally hosted font and its OFL license, icon, brand mark (`logo.svg`), social share image. Destination guidance lives in the HTML, not in JSON fetched at runtime.
+Python 3.10+ is required to build; Node 22 is used for checker tests.
 
 ```sh
 python3 tools/build.py
 python3 tools/check.py
-node --test tools/assessment.test.cjs
+node --test tools/checker.test.cjs
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Python 3.10+ and Node 18+ are enough. There are no packages to install for build or tests. Commit generated HTML and assets along with source changes. CI rebuilds, runs `tools/check.py`, runs the Node tests and fails if the committed output is stale.
+Open http://127.0.0.1:4173/. Rebuild and refresh after editing content or templates. The HTML files in `/blog/`, `/services/` and other page folders are generated. Edit their sources to avoid losing changes on the next build.
 
-## Hosting
+## Publishing
 
-The existing `.nojekyll` and `CNAME` are retained. GitHub Pages can serve the committed root directly. The canonical origin is `https://ksa.salaroutsourcing.com`, configured in `tools/build.py`. If the origin changes, update it and rebuild. No deployment or push is performed by the build.
+Push to `main` to build, validate and publish through GitHub Pages automatically. Pull requests run the checks without deploying. See the repository's **Actions → Validate and publish website** for deployment progress. Generated HTML does not need to be manually updated for an online content edit; the workflow generates it before deployment.
 
-There are 45 indexable pages. `sitemap.xml` lists canonical clean URLs with an ISO `lastmod`; `robots.txt` references it and states an explicit policy for search and AI crawlers; `llms.txt` maps the most useful pages for assistants; `feed.xml` carries the guides. Organization, WebSite, WebPage, Article, FAQPage, Service and BreadcrumbList data reflect visible content, and the Organization node carries the published contact details, service area and subject areas. No ratings, fake reviews, invented persons or ineligible rich-result claims are included.
+`python3 tools/export.py` creates `_site/` containing only public pages and assets. Content source files, templates, development tools and documentation are excluded. `CNAME` retains the existing custom domain.
 
-Legacy `.html` URLs have canonical links and immediate HTML redirects, including the formerly missing guide targets. `redirects.json` documents the mapping for a future host with real HTTP redirects. GitHub Pages cannot configure arbitrary HTTP 301s. `404.html` is the custom GitHub Pages error page; the Python development server uses its own default error response for missing URLs.
+The site is static: it has no admin login, database or file-upload system. The enquiry form prepares a WhatsApp or email draft; the visitor reviews and sends it in that application. It does not submit a message itself.
 
-## Assessment and contact
+## Service scope
 
-The assessment produces conditional preparation checks, never a government determination. It does not classify a country as requiring a fixed route or silently treat an unknown document as a degree. Document problems are shown before authentication stages. Purpose affects the preparation guidance.
-
-Answers stay in page memory, with no cookies or browser storage. A chosen assessment handoff uses a URL fragment containing only the fixed category selections; the contact page removes it from the displayed URL. The form prepares a `mailto:` draft for the existing `info@salaroutsourcing.com` address. Visitors review and send it themselves. The website does not submit messages, store records, upload documents or claim a secure vault.
-
-## Content and operational boundaries
-
-The existing business name and contact address are retained. Unverified credentials, incorporation numbers, founding dates, named review teams, fees, processing times, partnerships and blanket destination rules are not republished. Guide and problem pages are written per topic: no page reuses another page's sections. Only two dedicated country pages are published; the destination selector supplies distinct preparation questions for the other listed destinations instead of generating repetitive country pages, and that guidance is always present as text in the page so it can be read without scripts.
-
-Guide dates are clearly **editorial updates**, not claimed expert review dates. The content links to official sources; live submission checklists should always be checked with the responsible authority. HEC, HCCH and NAVTTC references were accessible during implementation; some MOFA/IBCC pages blocked or timed out. No detailed, unverified fee, representation, processing-time or treaty guarantees are derived from those unavailable pages.
-
-The privacy/security pages accurately describe the implemented website. Company email access rules, retention periods and deletion procedures were not supplied; the site explicitly asks visitors to clarify those arrangements before sending files. The operator should supply its actual policies and any verified reviewer credentials before making stronger claims.
-
-## Validation scope
-
-- All generated internal links, anchors, assets, one-H1 structure, heading order, canonical and social metadata, title and description lengths, duplicate titles/descriptions, sitemap consistency in both directions (entry to page and page to entry), JSON-LD syntax and required fields per node type, plus `robots.txt`, `llms.txt` and `feed.xml`.
-- Nine regression tests covering issue-first ordering, unknown records, diploma ambiguity, purpose-specific guidance, conditional country handling, Mosadaqa verification queries, every destination with published guidance and untrusted input rejection.
-- Browser checks: complete assessment, validation, email handoff (not sent), mobile menu/Escape, destination selection, journey stages, FAQ filters, legacy redirects and representative content pages.
-- Responsive homepage widths: 320, 390, 768, 1440px, with no horizontal overflow.
-- Reduced-motion CSS disables animations and transitions; visible focus states, labelled fieldsets and native radio keyboard operation.
-
-This is a static performance-focused implementation, not a promise of a Lighthouse score or search ranking. Field Core Web Vitals and real email delivery must be measured after publication; no production changes have been made by this work.
-
-## Search and answer-engine notes
-
-- Content lives in the generated HTML. The destination guidance, FAQ answers and problem copy are readable without JavaScript, so crawlers and assistants see the same text a visitor sees.
-- The FAQ block on the homepage and the Mosadaqa guide is mirrored by a `FAQPage` graph for the visible questions; nothing is marked up that a visitor cannot read.
-- No fee, timeline, treaty or approval claim is published. Those numbers change and belong to the competent authority, so the pages say so and point to the official source instead.
-- `llms.txt` summarises the site and links the canonical pages most likely to answer a question. It is generated, so it cannot drift from the site.
-- Titles stay within search-result width and every page has a unique description; the checker fails the build otherwise.
+Restricted attestation offers and appointed-agent claims have been removed. The remaining content describes independent preparation and requirements guidance. Official platforms, issuers and receiving institutions decide requirements and outcomes. Former URLs redirect to relevant current pages and are marked noindex; they do not retain the old service content.

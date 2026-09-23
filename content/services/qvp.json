@@ -1,0 +1,42 @@
+{
+  "slug": "qvp",
+  "title": "QVP Qualification Guidance",
+  "icon": "clipboard-check",
+  "category": "Employment requirements",
+  "description": "Clarify the qualification-verification request behind your Saudi employment process.",
+  "answer": "Qualification verification and a practical trade examination are different processes. Begin with the profession, employer request and the current official programme instructions.",
+  "sections": [
+    {
+      "title": "Who this helps",
+      "text": "Applicants whose employer or processing authority has asked for qualification verification for Saudi employment. Do not assume a requirement applies to every profession or every visa."
+    },
+    {
+      "title": "What we can help with",
+      "text": "We help you distinguish the named programme, assemble preparation questions and compare the requested qualification with your records."
+    },
+    {
+      "title": "Keep control of the application",
+      "text": "The competent programme determines eligibility, evidence and results. Any action that requires the applicant’s identity, consent or account must follow the official rules; we do not bypass those rules."
+    },
+    {
+      "title": "What varies",
+      "text": "The occupation, qualification, work experience and requesting organisation affect the questions to ask. Confirm the current instructions before paying any third party."
+    }
+  ],
+  "steps": [
+    "Identify the profession and employer request",
+    "Distinguish verification from a trade test",
+    "Review the current programme instructions",
+    "Prepare evidence for the official route"
+  ],
+  "sources": [
+    "qvp"
+  ],
+  "related": [
+    "/blog/qvp-vs-mosadaqa/",
+    "/document-issues/"
+  ],
+  "order": 2,
+  "status": "published",
+  "updated": "2026-09-24"
+}

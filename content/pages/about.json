@@ -1,0 +1,24 @@
+{
+  "slug": "about",
+  "title": "About SK Attestation Services",
+  "headline": "Independent guidance. Clear responsibility.",
+  "description": "We help people in Pakistan understand document requests for Saudi Arabia and the UAE.",
+  "sections": [
+    {
+      "title": "Our role",
+      "text": "We help clarify requirements, compare document issues and organise the questions to ask official platforms, issuers and recipients. We do not perform official authentication or make verification decisions."
+    },
+    {
+      "title": "How we work",
+      "text": "Start with a description of your document and intended use. Identify the request and any issue. Agree the exact scope before choosing paid assistance."
+    },
+    {
+      "title": "A clear boundary",
+      "text": "We do not claim appointed-agent status or government affiliation. Restricted and applicant-only steps stay with the applicant or the officially permitted provider."
+    },
+    {
+      "title": "Contact",
+      "text": "Use the contact page to ask about your situation. Please confirm an appointment before visiting the Rawalpindi office."
+    }
+  ]
+}

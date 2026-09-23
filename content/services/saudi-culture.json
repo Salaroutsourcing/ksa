@@ -1,0 +1,43 @@
+{
+  "slug": "saudi-culture",
+  "title": "Saudi Culture Requirements Guidance",
+  "icon": "landmark",
+  "category": "Academic documents",
+  "description": "Make sense of a cultural-office or academic verification request without assuming every case follows the same route.",
+  "answer": "A reference to “Saudi Culture” needs to be matched to the actual receiving office or platform and the purpose of the document. We help clarify the request; we do not issue cultural-office verification.",
+  "sections": [
+    {
+      "title": "Start with the request",
+      "text": "Ask who needs the document and which specific process they are referring to. Keep the written request, qualification title and awarding institution together."
+    },
+    {
+      "title": "University communication",
+      "text": "A request may need a response from the issuing university. We can help organise the questions and supporting context; only the university can confirm its records."
+    },
+    {
+      "title": "Common complications",
+      "text": "Different names, unclear study details and an unanswered university enquiry should be investigated before repeating an application. Do not alter a record or assume a declaration will be accepted."
+    },
+    {
+      "title": "Our boundary",
+      "text": "No cultural-office appointment, affiliation or authority is claimed. Official eligibility, verification and acceptance remain with the deciding institutions."
+    }
+  ],
+  "steps": [
+    "Identify the office or platform",
+    "Record the exact academic request",
+    "Clarify any issue with the issuer",
+    "Follow the published applicant instructions"
+  ],
+  "sources": [
+    "education",
+    "mosadaqa"
+  ],
+  "related": [
+    "/blog/saudi-culture-document-questions/",
+    "/document-issues/"
+  ],
+  "order": 3,
+  "status": "published",
+  "updated": "2026-09-24"
+}
