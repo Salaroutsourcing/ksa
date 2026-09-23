@@ -2,53 +2,43 @@
 (function () {
   "use strict";
   const allowed = {
+    service: [
+      "Mosadaqa degree attestation",
+      "Saudi Culture attestation",
+      "Saudi Embassy attestation",
+      "Apostille attestation",
+      "QVP attestation",
+      "Not sure yet",
+    ],
     document: [
       "Degree",
       "Diploma",
       "Transcript",
-      "Marriage Certificate",
-      "Birth Certificate",
-      "PCC",
-      "FRC",
-      "Commercial",
-      "Power of Attorney",
+      "Certificate",
       "Other",
     ],
     country: [
-      "UAE",
       "Saudi Arabia",
+      "United Arab Emirates",
       "Qatar",
+      "Kuwait",
       "Oman",
       "Bahrain",
-      "Kuwait",
-      "UK",
-      "Germany",
-      "France",
-      "Italy",
+      "United Kingdom",
       "Europe",
       "Canada",
       "Australia",
-      "USA",
-      "Other",
-    ],
-    purpose: [
-      "Employment",
-      "Study",
-      "Immigration",
-      "Marriage",
-      "Business",
-      "Legal",
       "Other",
     ],
     issue: [
       "No problem",
       "Name mismatch",
-      "Spelling mistake",
       "Father’s name mismatch",
+      "Spelling mistake",
       "Date-of-birth mismatch",
-      "Rejected document",
+      "Mosadaqa or QVP query",
+      "Rejected or refused",
       "Missing document",
-      "Mosadaqa / verification query",
       "Not sure",
     ],
   };
@@ -67,81 +57,47 @@
     if (a.issue !== "No problem") {
       const copy =
         a.issue === "Missing document"
-          ? "Identify the missing record and ask the issuer or requesting authority about replacement or accepted alternatives before submission."
-          : a.issue === "Rejected document"
-            ? "Review the authority’s stated reason before resubmitting. Additional stamps alone may not resolve the query."
-            : a.issue === "Mosadaqa / verification query"
-              ? "A verification query usually concerns the record itself. Read the exact wording, then compare the degree, transcript, CNIC and passport details, and ask the issuing institution about correction or verification before paying for another stage."
+          ? "Identify the missing record and ask the issuing body or the receiving organisation about a replacement or an accepted alternative before submitting."
+          : a.issue === "Rejected or refused"
+            ? "Work from the stated reason. Another stamp or another courier usually does not resolve a query that names a record detail."
+            : a.issue === "Mosadaqa or QVP query"
+              ? "Read the exact wording of the query and compare the degree, transcript, CNIC and passport details. Ask the issuing body about correction or verification before paying for another stage."
               : a.issue === "Not sure"
-              ? "Clarify the document and the receiving organisation’s request before selecting an authority or paying fees."
-              : "Compare the source records. Ask the responsible issuer about correction or verification; do not alter documents yourself.";
-      path.push({ title: "First: review your reported issue", text: copy });
+                ? "Describe the document and the request you received before selecting a service or paying a fee."
+                : "Compare the source records. Only the issuer of the incorrect record can correct it: the university for a degree, NADRA for the identity record, DGIP for the passport.";
+      path.push({ title: "First: resolve the reported issue", text: copy });
     }
-    path.push({
-      title: a.document + " · identify the issuer",
-      text: "Confirm the exact document title, issuing body and current record.",
-    });
-    const purposeNotes = {
-      Employment:
-        "Ask the employer whether authentication, professional recognition or both are required.",
-      Study:
-        "Ask the institution whether it needs direct issuer delivery, credential evaluation or authenticated documents.",
-      Immigration:
-        "Use the specific immigration authority’s written checklist; authentication does not determine eligibility.",
-      Marriage:
-        "Confirm the exact civil record, accepted translation and receiving authority’s requirements.",
-      Business:
-        "Identify the signatory, legal capacity and intended commercial use. Obtain professional advice where needed.",
-      Legal:
-        "Ask the receiving court or authority about execution, witnessing, personal appearance and accepted formats.",
-      Other:
-        "Clarify the intended use and the receiving organisation’s written requirements.",
+    const serviceNotes = {
+      "Mosadaqa degree attestation":
+        "Ask the requesting organisation whether it needs Mosadaqa verification, an authenticated original, or both, and keep its wording. The education authority stage normally comes before the foreign-affairs and Saudi-side stages.",
+      "Saudi Culture attestation":
+        "The cultural-mission stage follows the earlier education and foreign-affairs stages for eligible documents. Confirm current submission arrangements with the mission before sending anything.",
+      "Saudi Embassy attestation":
+        "The Saudi embassy stage is the last attestation step on the Pakistani side. Check whether your document needs it in addition to verification, translation or an electronic submission.",
+      "QVP attestation":
+        "QVP is qualification verification connected with Saudi work-permit processing. It checks the academic record rather than the stamps, so record details must match before submission.",
+      "Apostille attestation":
+        "Check whether the Apostille Convention applies to your document, your destination and the organisation receiving it. Apostille is not the same as Saudi-side attestation.",
+      "Not sure yet":
+        "Confirm which service applies before paying for anything. Send the exact wording of the request you received and we will map it to the stages.",
     };
     path.push({
-      title: "Verify requirements for " + a.purpose.toLowerCase(),
-      text: purposeNotes[a.purpose],
-    });
-    let authority = "Relevant authority · confirm before proceeding";
-    let detail =
-      "Identify the competent authority for this document. Do not assume an educational route applies.";
-    if (["Degree", "Transcript"].includes(a.document)) {
-      authority = "HEC or relevant educational authority · check eligibility";
-      detail =
-        "For eligible higher-education records, check HEC. A transcript from a school or other issuer may follow a different route.";
-    } else if (a.document === "Diploma") {
-      authority = "Qualification and issuer review";
-      detail =
-        "Confirm whether IBCC, HEC or a technical awarding body is relevant. A diploma is not automatically assigned to one authority.";
-    } else if (
-      ["Marriage Certificate", "Birth Certificate", "FRC"].includes(a.document)
-    ) {
-      authority = "Civil or identity record issuer";
-      detail =
-        "Identify the specific record and issuing body. Confirm its verification requirements before further authentication.";
-    } else if (a.document === "PCC") {
-      authority = "Issuing police authority";
-      detail =
-        "Check the recipient’s requirements for the certificate, coverage period and any verification or freshness requirement.";
-    } else if (["Commercial", "Power of Attorney"].includes(a.document)) {
-      authority = "Competent commercial or legal authority";
-      detail =
-        "Confirm the document’s execution, signatory, prerequisite authentication and any personal appearance requirement.";
-    }
-    path.push({ title: authority, text: detail });
-    path.push({
-      title: "MOFA · check the applicable service",
-      text: "Confirm prerequisites and whether attestation or an apostille service is applicable. These are not automatically two separate required steps.",
+      title: a.service + " · what this stage involves",
+      text: serviceNotes[a.service],
     });
     path.push({
-      title: "Apostille or embassy route · confirm applicability",
-      text: "Check the treaty relationship, document scope, official instructions and recipient. Country membership alone is not a complete determination.",
+      title: a.document + " · confirm the record",
+      text: "Check the exact document title, the issuing body and the current record. For degrees and diplomas the awarding institution holds the record.",
     });
     path.push({
-      title:
-        a.country === "Europe" || a.country === "Other"
-          ? "Identify the specific destination"
-          : "Receiving organisation in " + a.country,
-      text: "Confirm accepted format, translations and any recognition or destination-side procedure before submitting.",
+      title: "Records to compare before any stage",
+      text: "Degree or certificate, transcript where required, CNIC or NICOP, passport and any written request from the receiving organisation. Differences here are the most common cause of a query.",
+    });
+    path.push({
+      title: a.country === "Saudi Arabia" ? "Saudi-side requirement" : "Recipient in " + a.country,
+      text: a.country === "Saudi Arabia"
+        ? "Confirm whether the request is Mosadaqa verification, QVP, employment attestation or a combination, and whether the original or an electronic submission is expected."
+        : "Confirm the accepted format, translation and any authentication route with the organisation that will use the document.",
     });
     return path;
   }
@@ -326,15 +282,29 @@
         list.append(li);
       });
       form.querySelector(".result-summary").textContent =
+        answers.service +
+        " · " +
         answers.document +
         " · " +
         answers.country +
         " · " +
-        answers.purpose +
-        " · " +
         answers.issue;
       form.querySelector(".request-assessment").href =
         "/contact/#" + new URLSearchParams(answers).toString();
+      const wa = form.querySelector(".request-whatsapp");
+      if (wa)
+        wa.href =
+          wa.dataset.waBase +
+          encodeURIComponent(
+            "Hello SK Immigration Services. Service: " +
+              answers.service +
+              " | Document: " +
+              answers.document +
+              " | Destination: " +
+              answers.country +
+              " | Issue: " +
+              answers.issue,
+          );
       fields.forEach((field) => {
         field.hidden = true;
         field.disabled = true;
@@ -363,12 +333,12 @@
     const answers = cleanAnswers(Object.fromEntries(params));
     if (Object.keys(answers).length === 4) {
       contact.elements.message.value =
-        "I would like a document assessment.\n\nDocument: " +
+        "I would like help with the following.\n\nService: " +
+        answers.service +
+        "\nDocument: " +
         answers.document +
         "\nDestination: " +
         answers.country +
-        "\nPurpose: " +
-        answers.purpose +
         "\nIssue: " +
         answers.issue +
         "\n\nPlease help me identify the applicable requirements and next steps.";
@@ -387,8 +357,8 @@
       const name = contact.elements.name.value.trim();
       const body = message + (name ? "\n\nFrom: " + name : "");
       contact.querySelector("[data-email-link]").href =
-        "mailto:info@salaroutsourcing.com?subject=" +
-        encodeURIComponent("Document assessment enquiry") +
+        "mailto:Services@salaroutsourcing.com?subject=" +
+        encodeURIComponent("Attestation enquiry") +
         "&body=" +
         encodeURIComponent(body);
       contact.querySelector("[data-email-ready]").hidden = false;

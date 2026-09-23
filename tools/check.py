@@ -14,7 +14,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from content import BUSINESS, COUNTRIES, FAQS, GUIDES, PROBLEMS  # noqa: E402
+from content import BUSINESS, COUNTRIES, FAQS, GUIDES, PROBLEMS, SERVICES  # noqa: E402
 
 BASE = "https://ksa.salaroutsourcing.com"
 REQUIRED_META = ["description", "viewport", "og:title", "og:description", "og:url", "og:image", "og:type", "og:locale", "twitter:card"]
@@ -160,10 +160,10 @@ for file, page in sorted(pages.items()):
             rel(file, "article page without article:published_time")
     for href in page.links:
         url = urlsplit(href)
-        if url.scheme == "mailto" or url.netloc:
+        if url.scheme in ("mailto", "tel", "sms") or url.netloc:
             if url.netloc and url.netloc != "ksa.salaroutsourcing.com":
                 continue
-            if url.scheme == "mailto":
+            if url.scheme in ("mailto", "tel", "sms"):
                 continue
         if not href or href == "#":
             rel(file, "empty link")
@@ -263,8 +263,8 @@ countries_html = (ROOT / "countries/index.html").read_text() if (ROOT / "countri
 home_html = (ROOT / "index.html").read_text()
 for name, copy in COUNTRIES.items():
     probe = copy[:40]
-    if probe not in countries_html:
-        errors.append("destination text missing from /countries/: " + name)
+    if probe not in home_html:
+        errors.append("destination text missing from the home page: " + name)
 for script in ["script.js"]:
     if "fetch(" in (ROOT / script).read_text():
         errors.append(script + ": runtime fetch reintroduced (content must be in the HTML)")
@@ -321,6 +321,43 @@ for entry in entries:
         if entry.find("{http://www.w3.org/2005/Atom}" + tag) is None:
             errors.append("feed entry missing " + tag)
 llms = (ROOT / "llms.txt").read_text()
+
+# --- service focus, contact and entity guards --------------------------------
+service_pages = sorted(f.parent.name for f, p in pages.items()
+                       if f.parent.parent == ROOT / "services" and f.name == "index.html"
+                       and "refresh" not in p.meta)
+advertised = sorted(s["slug"] for s in SERVICES)
+if service_pages != advertised:
+    errors.append("service pages " + ", ".join(service_pages) + " do not match advertised services " + ", ".join(advertised))
+for f, page in pages.items():
+    if "refresh" in page.meta or page.meta.get("robots", "").startswith("noindex"):
+        continue
+    text = f.read_text()
+    if BUSINESS["whatsapp"] not in text:
+        rel(f, "no WhatsApp link")
+    if ("tel:+" + BUSINESS["whatsapp"]) not in text and "tel:+923045999859" not in text:
+        rel(f, "no click-to-call phone link")
+    nodes_flat = [n for doc in page.schema for n in (doc.get("@graph") or [doc]) if isinstance(n, dict)]
+    def is_org(node):
+        ty = node.get("@type"); ty = ty if isinstance(ty, list) else [ty]
+        return bool({"Organization", "ProfessionalService", "LocalBusiness"} & set(ty))
+    orgs = [n for n in nodes_flat if is_org(n)]
+    if not orgs:
+        rel(f, "no Organization node")
+    else:
+        org = orgs[0]
+        if org.get("@id") != BUSINESS["entityId"]:
+            rel(f, "Organization @id does not match the main business entity")
+        for field in ("name", "telephone", "address", "sameAs", "identifier", "areaServed", "knowsAbout"):
+            if field not in org:
+                rel(f, "Organization node missing " + field)
+home_text = (ROOT / "index.html").read_text()
+for needle in (BUSINESS["street"], BUSINESS["identifier"], BUSINESS["whatsapp"]):
+    if needle not in home_text:
+        errors.append("home page is missing trust detail: " + needle)
+if "data-destination" not in home_text:
+    errors.append("home page lost the destination selector")
+
 if not llms.startswith("# " + BUSINESS["name"]):
     errors.append("llms.txt does not start with the business name")
 if llms.count("](" + BASE) < 12:
