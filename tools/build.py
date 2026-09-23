@@ -265,6 +265,19 @@ def redirects():
     (ROOT/'redirects.json').write_text(json.dumps(aliases,indent=2)+'\n')
     (ROOT/'_redirects').write_text(''.join(f'{o} {n} 301\n' for o,n in sorted(aliases.items()) if o!=n))
 
+def cleanup():
+    keep={('/index.html' if p=='/' else (p.lstrip('/')+'index.html' if p.endswith('/') else p.lstrip('/'))) for p in PAGES}
+    keep|={s.lstrip('/') for s in STUBS}
+    keep.add('404.html'); keep.add('tools/responsive-preview.html')
+    removed=[]
+    for f in sorted(ROOT.rglob('*.html')):
+        r=str(f.relative_to(ROOT))
+        if r.startswith('.git/') or r.startswith('tools/'): continue
+        if r not in keep:
+            f.unlink(); removed.append(r)
+            d=f.parent
+            while d!=ROOT and not any(d.iterdir()): d.rmdir(); d=d.parent
+    return removed
 def write_sitemap():
     entries=''.join(f'  <url><loc>{BASE}{p}</loc><lastmod>{UPDATED[:10]}</lastmod></url>\n' for p in sorted(PAGES))
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+entries+'</urlset>\n')
