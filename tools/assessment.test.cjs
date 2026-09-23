@@ -41,6 +41,9 @@ test("country choices do not produce guaranteed treaty or embassy claims", () =>
     "Bahrain",
     "Kuwait",
     "UK",
+    "Germany",
+    "France",
+    "Italy",
     "Europe",
     "Canada",
     "Australia",
@@ -90,5 +93,19 @@ test("all document categories produce distinct valid paths", () => {
     const path = buildPath({ ...base, document });
     assert.equal(path.length, 6);
     assert.ok(path.every((x) => x.title && x.text));
+  }
+});
+
+test("a mosadaqa verification query is treated as a record problem first", () => {
+  const path = buildPath({ ...base, issue: "Mosadaqa / verification query" });
+  assert.equal(path[0].title, "First: review your reported issue");
+  assert.match(path[0].text, /record/);
+  assert.match(path[0].text, /CNIC/);
+});
+test("every destination with published guidance is an accepted answer", () => {
+  for (const country of ["Germany", "France", "Italy"]) {
+    const path = buildPath({ ...base, country });
+    assert.equal(path.length, 6);
+    assert.ok(path.at(-1).title.includes(country));
   }
 });

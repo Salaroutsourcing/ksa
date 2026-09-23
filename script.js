@@ -22,6 +22,9 @@
       "Bahrain",
       "Kuwait",
       "UK",
+      "Germany",
+      "France",
+      "Italy",
       "Europe",
       "Canada",
       "Australia",
@@ -45,6 +48,7 @@
       "Date-of-birth mismatch",
       "Rejected document",
       "Missing document",
+      "Mosadaqa / verification query",
       "Not sure",
     ],
   };
@@ -66,7 +70,9 @@
           ? "Identify the missing record and ask the issuer or requesting authority about replacement or accepted alternatives before submission."
           : a.issue === "Rejected document"
             ? "Review the authority’s stated reason before resubmitting. Additional stamps alone may not resolve the query."
-            : a.issue === "Not sure"
+            : a.issue === "Mosadaqa / verification query"
+              ? "A verification query usually concerns the record itself. Read the exact wording, then compare the degree, transcript, CNIC and passport details, and ask the issuing institution about correction or verification before paying for another stage."
+              : a.issue === "Not sure"
               ? "Clarify the document and the receiving organisation’s request before selecting an authority or paying fees."
               : "Compare the source records. Ask the responsible issuer about correction or verification; do not alter documents yourself.";
       path.push({ title: "First: review your reported issue", text: copy });
@@ -220,40 +226,40 @@
   });
   const destination = document.querySelector("[data-destination]");
   if (destination) {
-    let destinations;
     const copy = document.querySelector(".destination-copy");
     const guide = document.querySelector(".destination-guide");
+    // Guidance is read from the text list already in the page: no fetch, no
+    // hidden content, and identical wording for scripts, search and assistants.
     function showDestination() {
       const name = destination.value;
-      if (destinations && destinations[name])
-        copy.textContent = destinations[name];
-      else
-        copy.textContent =
-          "For " +
-          name +
-          ", confirm the receiving organisation’s document-specific instructions and the applicable official route before submission.";
+      const row = name
+        ? document.querySelector('[data-destination-key="' + name + '"]')
+        : null;
+      const source = row ? row.querySelector("dd") : null;
+      if (copy) {
+        if (source) {
+          const text = source.cloneNode(true);
+          const anchor = text.querySelector("a");
+          if (anchor) anchor.remove();
+          copy.textContent = text.textContent.trim();
+        } else {
+          copy.textContent = "";
+        }
+      }
+      if (!guide) return;
       if (name === "UAE" || name === "Saudi Arabia") {
         guide.href =
           "/countries/" + (name === "UAE" ? "uae" : "saudi-arabia") + "/";
         guide.innerHTML =
           'Explore destination <span aria-hidden="true">↗</span>';
-      } else {
+      } else if (name) {
         guide.href = "/guides/apostille-vs-embassy-attestation/";
         guide.innerHTML =
           'Understand the routes <span aria-hidden="true">↗</span>';
       }
     }
     destination.addEventListener("change", showDestination);
-    fetch("/assets/destinations.json")
-      .then((r) => {
-        if (!r.ok) throw new Error("Destination content unavailable");
-        return r.json();
-      })
-      .then((data) => {
-        destinations = data;
-        showDestination();
-      })
-      .catch(() => showDestination());
+    showDestination();
   }
 
   document.querySelectorAll("[data-assessment]").forEach((form) => {
