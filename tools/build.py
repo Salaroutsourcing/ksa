@@ -266,7 +266,7 @@ def redirects():
     (ROOT/'_redirects').write_text(''.join(f'{o} {n} 301\n' for o,n in sorted(aliases.items()) if o!=n))
 
 def cleanup():
-    keep={('/index.html' if p=='/' else (p.lstrip('/')+'index.html' if p.endswith('/') else p.lstrip('/'))) for p in PAGES}
+    keep={('index.html' if p=='/' else (p.lstrip('/')+'index.html' if p.endswith('/') else p.lstrip('/'))) for p in PAGES}
     keep|={(s.lstrip('/')+'index.html') if s.endswith('/') else s.lstrip('/') for s in STUBS}
     keep.add('404.html'); keep.add('tools/responsive-preview.html')
     removed=[]
