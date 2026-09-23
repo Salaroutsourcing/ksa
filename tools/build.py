@@ -233,39 +233,38 @@ def redirect_stub(target,label):
             f'<title>{label} | {BUSINESS["name"]}</title><meta http-equiv="refresh" content="0;url={target}"><link rel="canonical" href="{BASE}{target}">'
             f'</head><body><p>This page has moved to <a href="{target}">{target}</a>.</p></body></html>')
 def redirects():
-    aliases={'/check-documents.html':'/check-documents/','/blog.html':'/guides/',
+    aliases={
+     '/check-documents.html':'/check-documents/','/blog.html':'/guides/',
      '/blog/degree-name-different-from-passport.html':'/guides/degree-name-different-from-passport/',
      '/blog/hec-vs-ibcc.html':'/guides/hec-vs-ibcc/','/blog/mofa-attestation-guide.html':'/guides/mofa-attestation-pakistan/',
      '/blog/apostille-vs-embassy.html':'/guides/apostille-vs-embassy-attestation/',
-     '/services/hec-attestation/':'/services/mosadaqa-attestation/','/services/ibcc-attestation/':'/services/qvp-attestation/',
-     '/services/mofa-attestation/':'/services/saudi-culture-attestation/','/services/embassy-legalization/':'/services/saudi-embassy-attestation/',
-     '/services/super-legalization/':'/services/saudi-embassy-attestation/','/services/apostille/':'/guides/apostille-vs-embassy-attestation/',
+     '/services/apostille/':'/guides/apostille-vs-embassy-attestation/',
+     '/services/hec-attestation/':'/services/mosadaqa-attestation/',
+     '/services/ibcc-attestation/':'/services/qvp-attestation/',
+     '/services/mofa-attestation/':'/services/saudi-culture-attestation/',
+     '/services/embassy-legalization/':'/services/saudi-embassy-attestation/',
+     '/services/super-legalization/':'/services/saudi-embassy-attestation/',
+     '/navttc/':'/services/qvp-attestation/',
      '/countries/':'/countries/saudi-arabia/','/countries/uae/':'/services/uae-embassy-attestation/',
      '/documents/':'/services/mosadaqa-attestation/','/documents/degree/':'/services/mosadaqa-attestation/',
-     '/documents/education/':'/guides/mosadaqa-degree-attestation/','/documents/personal/':'/services/uae-embassy-attestation/',
-     '/documents/marriage-certificate/':'/services/saudi-embassy-attestation/','/documents/business/':'/services/saudi-embassy-attestation/',
-     '/documents/international-use/':'/services/uae-embassy-attestation/'}
-    for old,target in sorted(aliases.items()) if old != target:
-        label=PAGES.get(target,'Moved')
-        path=(ROOT/old.lstrip('/')) if old.endswith('.html') else (ROOT/old.strip('/')/'index.html')
-        path.parent.mkdir(parents=True,exist_ok=True)
-        path.write_text(redirect_stub(target,label))
-        STUBS.add(('/'+str(path.relative_to(ROOT))).replace('/index.html','/') if not old.endswith('.html') else '/'+str(path.relative_to(ROOT)))
+     '/documents/education/':'/guides/mosadaqa-degree-attestation/',
+     '/documents/personal/':'/services/uae-embassy-attestation/',
+     '/documents/marriage-certificate/':'/services/saudi-embassy-attestation/',
+     '/documents/business/':'/services/saudi-embassy-attestation/',
+     '/documents/international-use/':'/services/uae-embassy-attestation/',
+    }
+    aliases={o:n for o,n in aliases.items() if o!=n and o not in PAGES}
+    for old,new in sorted(aliases.items()):
+        if old in PAGES:continue
+        stub=redirect_stub(new,PAGES.get(new,'Moved'))
+        if old.endswith('.html'):
+            f=ROOT/old.lstrip('/'); f.parent.mkdir(parents=True,exist_ok=True); f.write_text(stub)
+        else:
+            d=ROOT/old.strip('/'); d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(stub)
+        STUBS.add(old)
     (ROOT/'redirects.json').write_text(json.dumps(aliases,indent=2)+'\n')
-    (ROOT/'_redirects').write_text(''.join(f'{o} {n} 301\n' for o,n in sorted(aliases.items()) if o != n and o not in PAGES))
-def cleanup():
-    keep={'index.html','404.html','tools/responsive-preview.html'}
-    keep|={ (p.lstrip('/')+'index.html') if p.endswith('/') else p.lstrip('/') for p in PAGES }
-    keep|={ (s.lstrip('/')+'index.html') if s.endswith('/') else s.lstrip('/') for s in STUBS }
-    removed=[]
-    for f in sorted(ROOT.rglob('*.html')):
-        rel=str(f.relative_to(ROOT))
-        if rel.startswith('.git/') or rel.startswith('tools/'): continue
-        if rel not in keep:
-            f.unlink(); removed.append(rel)
-            parent=f.parent
-            while parent!=ROOT and not any(parent.iterdir()): parent.rmdir(); parent=parent.parent
-    return removed
+    (ROOT/'_redirects').write_text(''.join(f'{o} {n} 301\n' for o,n in sorted(aliases.items()) if o!=n))
+
 def write_sitemap():
     entries=''.join(f'  <url><loc>{BASE}{p}</loc><lastmod>{UPDATED[:10]}</lastmod></url>\n' for p in sorted(PAGES))
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+entries+'</urlset>\n')
