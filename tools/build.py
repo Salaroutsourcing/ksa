@@ -267,7 +267,7 @@ def redirects():
 
 def cleanup():
     keep={('/index.html' if p=='/' else (p.lstrip('/')+'index.html' if p.endswith('/') else p.lstrip('/'))) for p in PAGES}
-    keep|={s.lstrip('/') for s in STUBS}
+    keep|={(s.lstrip('/')+'index.html') if s.endswith('/') else s.lstrip('/') for s in STUBS}
     keep.add('404.html'); keep.add('tools/responsive-preview.html')
     removed=[]
     for f in sorted(ROOT.rglob('*.html')):
