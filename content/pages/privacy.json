@@ -6,7 +6,11 @@
   "sections": [
     {
       "title": "Browsing and preferences",
-      "text": "This static website contains no analytics or advertising scripts. The hosting provider may process connection logs. A theme preference is stored in your browser only when available; it is not an account or a tracking identifier."
+      "text": "This website uses Google Analytics to understand visits and how pages are used. Google Analytics may use cookies and collect information about your browser, device and interactions with the site. The hosting provider may also process connection logs. Theme and motion preferences are stored in your browser when available."
+    },
+    {
+      "title": "Analytics and enquiries",
+      "text": "The site does not send enquiry message text or uploaded documents to Google Analytics through custom tracking. There is no document upload form. Google processes analytics information under its own privacy practices. You can manage cookies through your browser settings."
     },
     {
       "title": "Case checker",
